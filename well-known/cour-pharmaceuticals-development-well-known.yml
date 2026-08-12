@@ -1,0 +1,44 @@
+generated: '2026-08-11'
+method: probed
+source: live HTTPS probes of the COUR Pharma web host
+note: >-
+  Every /.well-known/ path probed on courpharma.com returned 404 with the site's standard
+  WordPress HTML 404 page. No well-known document of any kind is served, so NO WellKnown or
+  SecurityTxt pointer is emitted in apis.yml — this file records a verified ABSENCE, not a
+  presence. COUR Pharma is a clinical-stage biotechnology company with no developer program;
+  api./developer./developers./docs.courpharma.com do not resolve in DNS.
+hosts:
+- host: courpharma.com
+  paths:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+    content: html-404
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+    content: html-404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+    content: html-404
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+    content: html-404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+    content: html-404
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+    content: html-404
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+    content: html-404
+summary:
+  probed: 7
+  hits: 0
+  documents_saved: 0

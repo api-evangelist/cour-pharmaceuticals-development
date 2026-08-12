@@ -1,8 +1,18 @@
 aid: cour-pharmaceuticals-development
 name: Cour Pharmaceuticals Development
-description: 'Cour Pharmaceuticals Development is a company surfaced via the API Evangelist harvest backlog
-  (source: secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'COUR Pharmaceuticals Development Co., Inc. (COUR Pharma) is a privately held,
+  clinical-stage biotechnology company founded in 2012 and headquartered in the Chicago area
+  (Northbrook/Skokie, Illinois), spun out of research at Northwestern University. COUR develops
+  antigen-specific immune tolerance therapies built on its proprietary COUR Nanoparticle (CNP)
+  platform: biodegradable polymer nanoparticles of roughly 500 nm carrying about 1% disease-specific
+  antigen, which mimic apoptotic bodies so that antigen-presenting cells in the liver and spleen
+  re-recognize the antigen as self, deleting pathogenic T cells and expanding regulatory T cells.
+  Active clinical programs include CNP-103 for Type 1 Diabetes and CNP-106 for Myasthenia Gravis,
+  with earlier work in Primary Biliary Cholangitis and Celiac Disease. COUR is a therapeutics
+  developer, not a software or platform company: it publishes no developer program, no public API,
+  and no machine-readable API contract of any kind.'
 url: https://raw.githubusercontent.com/api-evangelist/cour-pharmaceuticals-development/refs/heads/main/apis.yml
+image: https://courpharma.com/wp-content/uploads/2025/06/Cour-OG.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +22,15 @@ created: '2026-08-11'
 modified: '2026-08-11'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Life Sciences
+- Immunology
+- Autoimmune Disease
+- Clinical Trials
+- Nanotechnology
+- Drug Development
+- Healthcare
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +38,53 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/cour-pharmaceuticals-development-domain-security.yml
 - type: Website
+  url: https://courpharma.com/
+- type: About
+  url: https://courpharma.com/about-us/
+- type: Blog
+  url: https://courpharma.com/news/
+- type: BlogRSS
+  url: https://courpharma.com/feed/
+- type: Partners
+  url: https://courpharma.com/partnerships/
+- type: Careers
+  url: https://courpharma.com/careers/
+- type: PrivacyPolicy
+  url: https://courpharma.com/privacy-policy/
+- type: TermsOfService
+  url: https://courpharma.com/terms-of-use/
+- type: Accessibility
+  url: https://courpharma.com/accessibility/
+- type: SecondaryMarket
   url: https://forgeglobal.com/cour-pharmaceuticals-development_stock/
+x-enrichment:
+  date: '2026-08-11'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    COUR Pharma is a clinical-stage biotech developing CNP nanoparticle immune-tolerance
+    therapies; its entire public site is a WordPress marketing/investor site with no developer
+    section, api./developer./docs.courpharma.com do not resolve in DNS, and every contract and
+    /.well-known/ probe returned the site's HTML 404 — the only machine-readable endpoint on the
+    host is stock WordPress /wp-json/ CMS plumbing (Elementor, Astra, Forminator), not a product API.
+  evidence:
+  - url: https://courpharma.com/openapi.json
+    status: 404
+  - url: https://courpharma.com/.well-known/agent-card.json
+    status: 404
+  - url: https://courpharma.com/.well-known/security.txt
+    status: 404
+  - url: https://courpharma.com/llms.txt
+    status: 404
+  - url: https://courpharma.com/graphql
+    status: 404
+  - url: https://api.courpharma.com/
+    status: 0
+  checked: '2026-08-11'
