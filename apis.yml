@@ -12,6 +12,17 @@ description: 'COUR Pharmaceuticals Development Co., Inc. (COUR Pharma) is a priv
   developer, not a software or platform company: it publishes no developer program, no public API,
   and no machine-readable API contract of any kind.'
 url: https://raw.githubusercontent.com/api-evangelist/cour-pharmaceuticals-development/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://courpharma.com/wp-content/uploads/2025/06/Cour-OG.png
 x-type: company
 x-source: harvest:secondary-market
